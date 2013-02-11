@@ -1,0 +1,23 @@
+{
+  "name": "ranaly",
+  "version": "0.1.0",
+  "description": "Ranaly client library",
+  "keywords": ["ranaly"],
+  "author": "Zihua Li <i@zihua.li> (http://zihua.li)",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luin/node_ranaly.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "redis": "0.8.2",
+    "moment": "2.0.0"
+  },
+  "devDependencies": {
+    "redis-mock": "0.1.4",
+    "mocha": "*"
+  }
+}
