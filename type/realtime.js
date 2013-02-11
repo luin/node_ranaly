@@ -34,7 +34,6 @@ module.exports = function (ranaly) {
   Realtime.prototype.set = function (value, callback) {
     value = parseInt(value, 10) || 0;
     db.set(this.key, value, callback);
-    console.log('Publish To: ' + this.key);
     db.publish(this.key, value);
   };
 

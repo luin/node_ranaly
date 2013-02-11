@@ -11,7 +11,10 @@ module.exports = function (ranaly) {
       callback = trim;
       trim = void 0;
     }
-    if (typeof increment !== 'number') {
+    if (typeof trim === 'string') {
+      trim = parseInt(trim, 10);
+    }
+    if (typeof trim !== 'number') {
       trim = 100;
     }
 

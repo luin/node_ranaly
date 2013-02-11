@@ -10,14 +10,13 @@
     "url": "https://github.com/luin/node_ranaly.git"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "make test"
   },
   "dependencies": {
     "redis": "0.8.2",
     "moment": "2.0.0"
   },
   "devDependencies": {
-    "redis-mock": "0.1.4",
     "mocha": "*"
   }
 }
