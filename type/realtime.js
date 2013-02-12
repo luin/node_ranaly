@@ -3,7 +3,7 @@ module.exports = function (ranaly) {
 
   var Realtime = function (bucket) {
     this.bucket = bucket;
-    this.key = ranaly.prefix + 'REALTIME' + ':' + this.bucket;
+    this.channel = this.key = ranaly.prefix + 'REALTIME' + ':' + this.bucket;
   };
 
   Realtime.prototype.incr = function (increment, callback) {
@@ -17,7 +17,7 @@ module.exports = function (ranaly) {
 
     db.incrby(this.key, increment, function (err, result) {
       if (!err) {
-        db.publish(this.key, result);
+        db.publish(this.channel, result);
       }
       if (typeof callback === 'function') {
         callback(err, result);
@@ -34,7 +34,7 @@ module.exports = function (ranaly) {
   Realtime.prototype.set = function (value, callback) {
     value = parseInt(value, 10) || 0;
     db.set(this.key, value, callback);
-    db.publish(this.key, value);
+    db.publish(this.channel, value);
   };
 
   return Realtime;
