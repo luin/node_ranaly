@@ -1,6 +1,6 @@
 {
-  "name": "ranaly",
-  "version": "0.1.0",
+  "name": "node_ranaly",
+  "version": "0.1.1",
   "description": "Ranaly client library",
   "keywords": ["ranaly"],
   "author": "Zihua Li <i@zihua.li> (http://zihua.li)",
